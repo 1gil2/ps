@@ -3,11 +3,13 @@
 import sys
 sys.setrecursionlimit(100000)
 
+
 def dfs(x, y):
     table.remove([x, y])
     for dx, dy in [[1, 0], [0, 1], [-1, 0], [0, -1]]:
         if [x + dx, y + dy] in table:
             dfs(x + dx, y + dy)
+
 
 for x in range(int(sys.stdin.readline())):
     m, n, k = map(int, sys.stdin.readline().split())

@@ -2,6 +2,7 @@
 
 import math
 
+
 def ser(N, r, c):
     if N == 1:
         return 2*r + c
@@ -15,6 +16,7 @@ def ser(N, r, c):
         return ser(N-1, r-a, c)+2*a*a
     else:
         return ser(N-1, r-a, c-a)+3*a*a
+
 
 N, r, c = map(int, input().split())
 print(int(ser(N, r, c)))

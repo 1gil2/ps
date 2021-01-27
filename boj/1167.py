@@ -6,6 +6,7 @@ import math
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
+
 def dfs(here):
     if visit[here] == 0:
         visit[here] = 1
@@ -13,6 +14,7 @@ def dfs(here):
             if visit[there] == 0:
                 dist[there] = dist[here] + dis
                 dfs(there)
+
 
 n = int(input())
 tree = [[] for x in range(n + 1)]

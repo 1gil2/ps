@@ -1,11 +1,13 @@
 #silver 2
 
+
 def paper(x, y, N, A):
     for i in range(x, x + N):
         for j in range(y, y + N):
             if A[x][y] != A[i][j]:
                 return False
     return True
+
 
 def dc(x, y, N, A, B):
     if paper(x, y, N, A):

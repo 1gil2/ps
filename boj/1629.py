@@ -1,10 +1,12 @@
 #silver 1
 
+
 def bit(x):
     if x == 0:
         return
     bi.append(x % 2)
     bit(x // 2)
+
 
 a, b, c = map(int, input().split())
 

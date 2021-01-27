@@ -7,6 +7,7 @@ input = sys.stdin.readline
 dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]
 
+
 def dfs(x, y):
     if x == m-1 and y == n-1:
         return 1
@@ -22,6 +23,7 @@ def dfs(x, y):
                 dp[x][y] += dfs(x1, y1)
 
     return dp[x][y]
+
 
 m, n = map(int, input().split())
 table = [list(map(int, input().split())) for x in range(m)]

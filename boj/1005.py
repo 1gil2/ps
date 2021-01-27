@@ -7,7 +7,7 @@ input = sys.stdin.readline
 t = int(input())
 for _ in range(t):
     n, k = map(int, input().split())
-    cost = [0] + list(map(int,input().split()))
+    cost = [0] + list(map(int, input().split()))
     indegree = [0 for x in range(n+1)]
     after = [[] for x in range(n+1)]
     ans = [0 for x in range(n+1)]

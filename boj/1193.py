@@ -2,7 +2,7 @@
 
 X = int(input())
 cnt = 1
-while(X > 0):
+while X > 0:
     X -= cnt
     cnt += 1
 if cnt%2 == 1:

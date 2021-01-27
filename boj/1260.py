@@ -3,14 +3,16 @@
 import sys
 from collections import deque
 
+
 def dfs(x):
     if visit[x] == 1:
         return
     visit[x] = 1
     for y in range(1, n+1):
-        if(visit[y] == 0 and table[x][y] == 1):
+        if visit[y] == 0 and table[x][y] == 1:
             print(y, end=' ')
             dfs(y)
+
 
 n, m, v = map(int, sys.stdin.readline().split())
 
@@ -34,7 +36,7 @@ print(v, end=' ')
 while dq:
     a = dq.popleft()
     for x in range(1, n+1):
-        if(visit[x] == 0 and table[a][x] == 1):
+        if visit[x] == 0 and table[a][x] == 1:
             dq.append(x)
             visit[x] = 1
             print(x, end=' ')

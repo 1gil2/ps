@@ -1,5 +1,6 @@
 #silver 5
 
+
 def chess(x, y):
     cnt = 0
     for i in range(8):
@@ -9,6 +10,7 @@ def chess(x, y):
     if cnt>=32:
         return 64-cnt
     return cnt
+
 
 n, m = map(int, input().split())
 table = [input() for x in range(n)]
