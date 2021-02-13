@@ -3,6 +3,7 @@
 import sys
 sys.setrecursionlimit(10**6)
 
+
 def back_lcs(a, b):
     global ans
     if a < 0 or b < 0:
