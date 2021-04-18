@@ -1,6 +1,5 @@
 #gold 3
 
-
 import sys
 from collections import deque
 from itertools import combinations
@@ -32,8 +31,14 @@ def bfs():
 
 
 n, k = map(int, input().split())
+if len(str(n)) == 1:
+    print(-1)
+    sys.exit()
+if len(str(n)) == 2 and str(n)[-1] == '0':
+    print(-1)
+    sys.exit()
 
-combi = list(combinations([x for x in range(len(str(n)))] , 2))
+combi = list(combinations([x for x in range(len(str(n)))], 2))
 
 dq = deque()
 dq.append(n)
@@ -43,7 +48,4 @@ while k:
     ans = bfs()
     k -= 1
 
-if ans:
-    print(ans)
-else:
-    print(-1)
+print(ans)
