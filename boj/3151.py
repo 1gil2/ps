@@ -1,4 +1,5 @@
 #gold 4
+#pypy3
 
 import sys
 
