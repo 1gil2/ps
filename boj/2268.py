@@ -1,4 +1,5 @@
 #gold 1
+#pypy3
 
 import sys
 from math import log, ceil
