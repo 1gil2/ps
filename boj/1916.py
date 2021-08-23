@@ -15,6 +15,9 @@ def dijkstra(start):
     while Q:
         cost, here = heappop(Q)
 
+        if dist[here] < cost:
+            continue
+
         for there, cost2 in graph[here]:
             D = cost+cost2
 

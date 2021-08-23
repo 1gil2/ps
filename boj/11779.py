@@ -16,6 +16,9 @@ def dijk(s, e):
     while heap:
         d, here = heappop(heap)
 
+        if dist[here] < d:
+            continue
+
         for there, cost in table[here]:
             D = cost + d
 
@@ -28,7 +31,6 @@ def dijk(s, e):
                 path[there].append(there)
 
     return dist[e]
-
 
 n = int(input())
 m = int(input())
